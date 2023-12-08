@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nxt Museum</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #9e3c3c9c;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            width: 50px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 1em;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2em;
+            flex-grow: 1; /* Expand and take remaining space */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+        }
+
+        .fake-review-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+            flex-wrap: wrap;
+        }
+
+        .fake-review {
+            width: 30%;
+            padding: 1em;
+            background-color: #9e3c3c9c;
+            border-radius: 8px;
+            color: #fff;
+            text-align: left;
+            margin-bottom: 1em;
+        }
+
+        .fake-review img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1em;
+        }
+
+        .fake-review div {
+            flex-grow: 1;
+        }
+
+        .fake-review strong {
+            font-size: 1em;
+            color: #fff;
+        }
+
+        .fake-review p {
+            margin-bottom: 0.5em;
+            line-height: 1.4;
+            font-size: 0.8em;
+        }
+
+        .language-switcher {
+            margin-top: 10px;
+        }
+
+        .language-switcher select {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="IMG/Screenshot 2023-11-29 113904.png" alt="LOGO" id="logo">
+        <h2>Nxt Museum</h2>
+
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+            <label for="language">Language:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="nl">Nederlands</option>
+            </select>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#" id="home-link">Home</a>
+        <a href="tentoonstellingen.html" id="exhibitions-link">Tentoonstellingen</a>
+        <a href="#" id="about-link">Over ons</a>
+        <a href="#" id="contact-link">Contact</a>
+    </nav>
+
+    <section id="welcome-section-en">
+        <h2>Welcome to Nxt Museum</h2>
+        <p>Discover a realm where art and technology converge, creating an immersive experience unlike any other. Nxt Museum, located at the intersection of creativity and innovation, invites you to explore groundbreaking exhibitions that push the boundaries of what is possible.</p>
+    </section>
+
+    <section id="welcome-section-nl" style="display: none;">
+        <h2>Welkom bij Nxt Museum</h2>
+        <p>Welkom in Nxt Museum, waar kunst en technologie samenkomen in een unieke ervaring. Verken grensverleggende tentoonstellingen en laat je verrassen door interactieve kunstwerken. Stap binnen en ontdek de nieuwe dimensie van artistieke expressie bij Nxt Museum.</p>
+    </section>
+
+    <!-- Add other content sections for different languages as needed -->
+
+    <!-- Fake Review Section Container -->
+    <div class="fake-review-container">
+
+        <!-- Fake Review Section 1 -->
+        <div class="fake-review">
+            <img src="fake_reviewer1.jpg" alt="Reviewer 1">
+            <div>
+                <p><strong>Fantastisch museum!</strong></p>
+                <p>Ik heb een geweldige tijd gehad in Nxt Museum. De tentoonstellingen waren fascinerend en de ervaring was onvergetelijk. Een must-visit voor kunst- en geschiedenisliefhebbers!</p>
+            </div>
+        </div>
+        <!-- End Fake Review Section 1 -->
+
+        <!-- Fake Review Section 2 -->
+        <div class="fake-review">
+            <img src="fake_reviewer2.jpg" alt="Reviewer 2">
+            <div>
+                <p><strong>Niet geweldig.</strong></p>
+                <p>De tentoonstellingen waren teleurstellend en de algehele ervaring liet veel te wensen over. Ik zou elders kijken voor een betere museumervaring.</p>
+            </div>
+        </div>
+        <!-- End Fake Review Section 2 -->
+
+        <!-- Fake Review Section 3 -->
+        <div class="fake-review">
+            <img src="fake_reviewer3.jpg" alt="Reviewer 3">
+            <div>
+                <p><strong>Geweldige plek!</strong></p>
+                <p>NxtMuseum is echt een geweldige plek om kunst en geschiedenis te ontdekken. De tentoonstellingen zijn boeiend en de sfeer is fantastisch. Sterk aanbevolen!</p>
+            </div>
+        </div>
+        <!-- End Fake Review Section 3 -->
+
+    </div>
+    <!-- End Fake Review Section Container -->
+
+    <footer>
+        <p>&copy; 2023 Nxt Museum. Alle rechten voorbehouden.</p>
+        <p>Volg ons op Instagram, YouTube, TikTok en Twitter</p>
+    </footer>
+
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+
+        function changeLanguage() {
+            var languageSelect = document.getElementById('language');
+            var selectedLanguage = languageSelect.options[languageSelect.selectedIndex].value;
+
+            // Hide all sections
+            document.getElementById('welcome-section-en').style.display = 'none';
+            document.getElementById('welcome-section-nl').style.display = 'none';
+
+            // Show the selected language section
+            document.getElementById('welcome-section-' + selectedLanguage).style.display = 'block';
+        }
+
+        document.getElementById('logo').addEventListener('click', refreshPage);
+        document.getElementById('home-link').addEventListener('click', refreshPage);
+        document.getElementById('exhibitions-link').addEventListener('click', refreshPage);
+        document.getElementById('about-link').addEventListener('click', refreshPage);
+        document.getElementById('contact-link').addEventListener('click', refreshPage);
+    </script>
+
+</body>
+</html>

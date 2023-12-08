@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="CSS/Style.css">
+
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: none;
+        }
+
+        .flex-container > div:nth-child(1) {
+            background-color: none;
+        }
+
+        .flex-container > div:nth-child(2) {
+            margin-left: 2px;
+            background-color: black;
+            width: 500px;
+            height: 123px;
+            border-radius: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px; 
+            color: white;
+            outline: white ridge;
+            cursor: pointer; 
+        }
+
+        .flex-container > div:nth-child(2) img {
+            max-height: 100%; 
+        }
+
+        .flex-container > div:nth-child(2) a {
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div><img src="IMG/Screenshot 2023-11-29 113904.png" alt="LOGO"></div> <!-- BOX 1 -->
+        <div>
+            <a href="https://nxtmuseum.com/nl/" target="_blank">
+                <div>
+                    <img src="path/to/image1.jpg" alt="Image 1">
+                    <img src="path/to/image2.jpg" alt="Image 2">
+                </div>
+                <div>
+                    <p>Welcome To NXT Museum</p>
+                </div>
+            </a>
+        </div> <!-- BOX 2 -->
+        <div>buttons</div> <!-- BOX 3 -->
+        <div>insbutton</div> <!-- BOX 4 -->
+        <div>fcbbutton</div>
+        <div>ytbuttons</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

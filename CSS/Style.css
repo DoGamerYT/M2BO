@@ -1,6 +1,13 @@
-img {
-    width: 20px;
-    height: 20px;
+*{
+    background-color: grey;
+    background-image: none;
     
+}
+
+img {
+    border-radius: 1px;
+    margin-top: 0px;
+    outline: auto white;
+    max-height: 100%;
 }
 

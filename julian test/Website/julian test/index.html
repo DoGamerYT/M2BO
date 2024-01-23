@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nxt Museum</title>
+    <link rel="icon" type="image/x-icon" href="IMG/LOGONOTEXT.png">
+    <script type="module" defer src="app.js"></script>
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+<body>
+
+    <header>
+        <img src="IMG/LOGOTEXT.png" alt="LOGO" id="logo">
+        <h2>Nxt Museum</h2>
+
+    
+        <div class="language-switcher">
+            <label for="language">Language:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="nl">Nederlands</option>
+            </select>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#" id="home-link">What's on</a>
+        <a href="#" id="exhibitions-link">Jouw Bezoek</a>
+        <a href="#" id="about-link">Over ons</a>
+        <a href="#" id="contact-link">Blog</a>
+    </nav>
+
+    <section id="welcome-section-en">
+        <h2>Welcome to Nxt Museum</h2>
+        <p>Discover a realm where art and technology converge, creating an immersive experience unlike any other. Nxt Museum, located at the intersection of creativity and innovation, invites you to explore groundbreaking exhibitions that push the boundaries of what is possible.</p>
+    </section>
+
+    <section id="welcome-section-nl" style="display: none;">
+        <h2>Welkom bij Nxt Museum</h2>
+        <p>Welkom in Nxt Museum, waar kunst en technologie samenkomen in een unieke ervaring. Verken grensverleggende tentoonstellingen en laat je verrassen door interactieve kunstwerken. Stap binnen en ontdek de nieuwe dimensie van artistieke expressie bij Nxt Museum.</p>
+    </section>
+
+   <div class="tentoonstellingen-container">
+
+        <div class="tentoonstelling">
+            <img src="IMG/20231116_120823.png" alt="tentoonstelling 1">
+            <div>
+                <p>
+                    verhaal 1
+                </p>
+            </div>
+            
+
+        <div class= "tentoonstelling">
+            <img src="img/20231116_121103.jpg" alt="tentoonstelling 2">
+            <div>
+                <p>
+                    verhaal 2 
+                </p>
+            </div>
+        </div>
+        </div>
+   </div>
+ 
+    <div class="fake-review-container">
+
+
+        <div class="fake-review">
+            <img src="IMG/face1.jfif" alt="Reviewer 1">
+            <div>
+                <p><strong>Fantastisch museum!</strong></p>
+                <p>Ik heb een geweldige tijd gehad in Nxt Museum. De tentoonstellingen waren fascinerend en de ervaring was onvergetelijk. Een must-visit voor kunst- en geschiedenisliefhebbers!</p>
+            </div>
+        </div>
+
+
+ 
+        <div class="fake-review">
+            <img src="IMG/face2.jfif" alt="Reviewer 2">
+            <div>
+                <p><strong>Niet geweldig.</strong></p>
+                <p>De tentoonstellingen waren teleurstellend en de algehele ervaring liet veel te wensen over. Ik zou elders kijken voor een betere museumervaring.</p>
+            </div>
+        </div>
+    
+
+     
+        <div class="fake-review">
+            <img src="IMG/face3.jfif" alt="Reviewer 3">
+            <div>
+                <p><strong>Geweldige plek!</strong></p>
+                <p>NxtMuseum is echt een geweldige plek om kunst en geschiedenis te ontdekken. De tentoonstellingen zijn boeiend en de sfeer is fantastisch. Sterk aanbevolen!</p>
+            </div>
+        </div>
+    </div>
+  
+
+    <footer>
+        <p>&copy; 2023 Nxt Museum. Alle rechten voorbehouden.</p>
+        <p>Volg ons op Instagram, YouTube, TikTok en Twitter</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
